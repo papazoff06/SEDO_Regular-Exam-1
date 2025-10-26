@@ -1,0 +1,120 @@
+git status
+git branch
+git branch feature/add-quotes
+git branch -a
+git branch bugfix/change-button
+git branch chore/display-logic
+code .
+doskey /history > git-log.txt
+
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git status
+On branch main
+nothing to commit, working tree clean
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git checkout feature/add-quotes
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git commit -m "add-cuotes fix1"
+[feature/add-quotes 57038fe] add-cuotes fix1
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git add .
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git commit -m "add-quotes fix2"
+[feature/add-quotes d870acb] add-quotes fix2
+ 1 file changed, 9 insertions(+), 4 deletions(-)
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git commit -m "add-quotes fix3"
+[feature/add-quotes d90b652] add-quotes fix3
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git rebase -i HEAD~3
+[detached HEAD 15af6d7] combination of 3 commits
+ Date: Sun Oct 26 09:47:49 2025 +0200
+ 3 files changed, 16 insertions(+), 6 deletions(-)
+Successfully rebased and updated refs/heads/feature/add-quotes.
+fatal: The current branch feature/add-quotes has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature/add-quotes
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git push --set-upstream origin feature/add-quotes
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 914 bytes | 914.00 KiB/s, done.
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote:      https://github.com/papazoff06/SEDO_Regular-Exam-1/pull/new/feature/add-quotes
+remote:
+branch 'feature/add-quotes' set up to track 'origin/feature/add-quotes'.
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git checkout bugfix/change-button     
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git commit -m "change-button fix1"
+[bugfix/change-button b85a53e] change-button fix1
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git add .
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git commit -m "change-button fix2"
+[bugfix/change-button 6370275] change-button fix2
+ 2 files changed, 7 insertions(+), 9 deletions(-)
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git commit -m "change button fix3"
+[bugfix/change-button 91618d9] change button fix3
+ 3 files changed, 4 insertions(+), 3 deletions(-)
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git rebase -i HEAD~3
+[detached HEAD b7c0f72] change-buuton fix  3 commits in to one
+ Date: Sun Oct 26 09:59:32 2025 +0200
+ 3 files changed, 9 insertions(+), 8 deletions(-)
+Successfully rebased and updated refs/heads/bugfix/change-button.
+fatal: The current branch bugfix/change-button has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin bugfix/change-button
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1>  git push --set-upstream origin bugfix/change-button
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 686 bytes | 686.00 KiB/s, done.
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote:      https://github.com/papazoff06/SEDO_Regular-Exam-1/pull/new/bugfix/change-button
+remote:
+branch 'bugfix/change-button' set up to track 'origin/bugfix/change-button'.
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git checkout chore/display-logic     
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git commit -m "display-logic fix1"
+ 3 files changed, 7 insertions(+), 4 deletions(-)
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git commit -m "display-logic fix2" 
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git add .
+error: pathspec 'display-logic fix3' did not match any file(s) known to git
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git rebase -i HEAD~3
+fatal: invalid upstream 'HEAD~3'
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git rebase -i HEAD~3
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git commit -m "display-logic fix3"
+[chore/display-logic a738475] display-logic fix3
+ 2 files changed, 8 insertions(+), 5 deletions(-)
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git rebase -i HEAD~3
+[detached HEAD f7f99bf] display-logic fix 3 commits in to one
+ Date: Sun Oct 26 10:05:48 2025 +0200
+ 3 files changed, 13 insertions(+), 6 deletions(-)
+Successfully rebased and updated refs/heads/chore/display-logic.
+fatal: The current branch chore/display-logic has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin chore/display-logic
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> git push --set-upstream origin chore/display-logic
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 858 bytes | 858.00 KiB/s, done.
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'chore/display-logic' on GitHub by visiting:
+remote:      https://github.com/papazoff06/SEDO_Regular-Exam-1/pull/new/chore/display-logic
+remote:
+To https://github.com/papazoff06/SEDO_Regular-Exam-1.git
+ * [new branch]      chore/display-logic -> chore/display-logic
+branch 'chore/display-logic' set up to track 'origin/chore/display-logic'.
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1> doskey /history > git-log.txt
+PS D:\DevOps\Exam\SEDO_Regular-Exam-1>
